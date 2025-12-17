@@ -7,11 +7,13 @@ public class Proyecto {
 
     // region constructores
     public Proyecto(String nombre){
-        // TODO 41: Constructor 1 Proyecto
-
+        // TODO 41: Constructor 1 Proyecto DONE
+        this.nombre = nombre;
     }
     public Proyecto(String nombre, int presupuesto) {
-        // TODO 42: Constructor 2 Proyecto
+        // TODO 42: Constructor 2 Proyecto DONE
+        this.nombre = nombre;
+        this.presupuesto = presupuesto;
 
     }
     // endregion
@@ -64,8 +66,8 @@ public class Proyecto {
         equipo.setLider(numeroParticipante);
     }
     public void mostrarEquipo() {
-        // TODO 43: Mostrar el equipo
-
+        // TODO 43: Mostrar el equipo DONE
+        System.out.print(equipo);
     }
 
     public String toString() {
@@ -78,10 +80,16 @@ public class Proyecto {
         // |                   |        |         |            |         |         |
         // CartasCoches        Aitor             10 h.      1300      1200      -100
         Trabajador lider = equipo.getLider();
+        Proyecto proyecto = new Proyecto(nombre,presupuesto);//todo revisar Alvaro
 
 
+        return String.format("%-20s %-10s %+10 h",proyecto.getNombre(), lider.getNombre(), lider.getPrecioHora() ) ;
 
-        return "";
     }
+//todo revisar esto con main cuando la clase equipo este hecha Alvaro
 
+//    public static void main(String[] args) {
+//        Proyecto proyecto = new Proyecto("Hola", 1000);
+//        proyecto.toString();
+//    }
 }
