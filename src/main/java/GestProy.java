@@ -1,30 +1,28 @@
 public class GestProy {
 
     // region atributos
-    private Proyecto proyecto1;
-    private Proyecto proyecto2;
-    private Proyecto proyecto3;
-    private Proyecto proyecto4;
+    private Proyecto[] proyectos = new Proyecto[10];
+
     // endregion
 
     // getters y setters
     public Proyecto getProyecto(int numero) {
-        switch (numero){
-            case 1: return proyecto1;
-            case 2: return proyecto2;
-            case 3: return proyecto3;
-            case 4: return proyecto4;
-        }
+//        switch (numero){
+//            case 1: return proyecto1;
+//            case 2: return proyecto2;
+//            case 3: return proyecto3;
+//            case 4: return proyecto4;
+//        }
         return null;
     }
 
     public void setProyecto(int numero, Proyecto proyecto) {
-        switch (numero){
-            case 1: proyecto1 = proyecto; break;
-            case 2: proyecto2 = proyecto; break;
-            case 3: proyecto3 = proyecto; break;
-            case 4: proyecto4 = proyecto; break;
-        }
+//        switch (numero){
+//            case 1: proyecto1 = proyecto; break;
+//            case 2: proyecto2 = proyecto; break;
+//            case 3: proyecto3 = proyecto; break;
+//            case 4: proyecto4 = proyecto; break;
+//        }
     }
     // endregion
 
@@ -96,6 +94,10 @@ public class GestProy {
         // TODO 36: Mostrar los proyectos junto con su número de proyecto utilizando un bucle
 
 
+        for (int i = 0; i < proyectos.length; i++) {
+
+        }
+
 
 
 
@@ -105,10 +107,14 @@ public class GestProy {
 
     public void mostrarEquipoProyecto(int numProyecto) {
         // TODO 37: Mostrar el equipo si existe
-
-
-
-
+        if (numProyecto<1 || numProyecto>10){
+            return;
+        }
+        Proyecto p = proyectos[numProyecto-1];
+        if (p == null){
+            return;
+        }
+        p.mostrarEquipo();
     }
 
     public void setLiderProyecto(int numProyecto, int numParticipante) {
