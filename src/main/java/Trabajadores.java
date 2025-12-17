@@ -1,14 +1,14 @@
 public class Trabajadores {
 
-        private static Trabajador[] trabajadores= {
+        private static Trabajador[] trabajadores = {
 
             new Trabajador("Aitor", 2),
             new Trabajador("Alba", 2),
             new Trabajador("Ander", 1),
             new Trabajador("Laura", 1),
             new Trabajador("Nerea", 1),
-            new  Trabajador("Edurne", 0),
-            new     Trabajador("Tasio", 0),
+            new Trabajador("Edurne", 0),
+            new Trabajador("Tasio", 0),
             new Trabajador("Iosu", 0),
 
         };
