@@ -2,13 +2,9 @@ public class Equipo {
 
     private Trabajador lider;
 
-    private Trabajador[] participantes;
+    private Trabajador[] participantes = new Trabajador[8];
 
-    private int numParticipantes;
-    public Equipo(){
-        participantes = new Trabajador[8];
-        numParticipantes = 0;
-    }
+    private int numParticipantes = 0;
 
     public int getMaxNumeroParticipantes() {
         return Ctes.MAX_NUM_PARTICIPANTES_EQUIPO;
@@ -23,7 +19,7 @@ public class Equipo {
 
         participantes[numero-1] = trabajador;
     }
-//Alvaro
+
     public boolean tieneLider() {
         // TODO 21: Saber si el equipo tiene líder
         return false;
